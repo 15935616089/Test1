@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        优先级   哪种选择器值得更具体，优先级就比较高
+         */
+        /* id(唯一)>类>标签
+           复合  同向比较 要比相同的选择器的优先级要高
+           */
+        body div{
+            color:blue;
+        }
+        body .three{
+            color:blue;
+        }
+        .one{
+            color:red;
+        }
+        .two{
+            color:green;
+        }
+        #one{
+            color:orange;
+        }
+        #one:hover{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <div class="one three" id="one">
+        123
+    </div>
+    <div class="two three">
+        123
+    </div>
+</body>
+</html>
